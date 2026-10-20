@@ -131,9 +131,10 @@ class TelaDashboard extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 // TODO [Desafio 6]: Substituir o Container simples por um Card do Material com elevation: 4
-                Container(
+                Card(
+                  elevation 4,
                   width: double.infinity,
-                  padding: const EdgeInsets.all(20.0),
+	          padding: const EdgeInsets.all(20.0),
                   decoration: BoxDecoration(
                     color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(12),
