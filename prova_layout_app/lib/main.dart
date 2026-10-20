@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widget/bloco_estatistica.dart'   // TODO Desafio 7: Importar o widget customizado criado em lib/widgets/bloco_estatistica.dart
+import 'widget/bloco_estatistica.dart';   // TODO Desafio 7: Importar o widget customizado criado em lib/widgets/bloco_estatistica.dart
 // import 'widgets/bloco_estatistica.dart';
 
 void main() {
@@ -55,10 +55,17 @@ class TelaDashboard extends StatelessWidget {
             // Desafio 1: Adicionar o 3º Card (Icons.camera_alt, '45', 'Fotos') com Expanded.
             // Desafio 8: Refatorar esta seção usando GridView.count (grade 2x2).
             // ===================================================================
-            Row(
+	    GridView.count(
+  		crossAxisCount: 2, 
+ 		crossAxisSpacing: 12.0,
+  		mainAxisSpacing: 12.0, 
+  		shrinkWrap: true,
+	        childAspectRatio: 2.5, 
+  		physics: const NeverScrollableScrollPhysics(),
               children: [
                 Expanded(                      //Desafio 4:    Se esse Expanded Estiver com estouro de espaçamento(overflow) ele Ira,
                   child: Container(		//quebrar e juntar tudo um em cima do outro e ira perder a responsividade da aplicação.
+		    //height: 1000.0,      Altura maior q deveria
                     padding: const EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
                       color: Colors.teal.shade100,
@@ -131,15 +138,12 @@ class TelaDashboard extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 // TODO [Desafio 6]: Substituir o Container simples por um Card do Material com elevation: 4
-                Card(
-                  elevation 4,
-                  width: double.infinity,
+                  Card(
+		  elevation: 4,
+	          child: SizedBox(
+		  width: double.infinity,
+		  child: Padding(
 	          padding: const EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.grey.shade300),
-                  ),
                   child: Row(
                     children: [
                       const Icon(Icons.star, size: 48, color: Colors.amber),
@@ -154,6 +158,9 @@ class TelaDashboard extends StatelessWidget {
                     ],
                   ),
                 ),
+	       ),
+	      ),
+	       
                 Positioned(
                   top: -8,
                   right: -8,
@@ -176,7 +183,7 @@ class TelaDashboard extends StatelessWidget {
 		   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
 		   decoration: BoxDecoration(
 	             color: Colors.green,
-	 	     borderRadius: BoxRadius.circular(12),
+	 	     borderRadius: BorderRadius.circular(12),
 		),
 		 child: const Text(
 		  'Confirmado',
@@ -191,6 +198,7 @@ class TelaDashboard extends StatelessWidget {
               ],
             ),
 	    
+            //TODO [Desafio 3]
             const SizedBox(height: 24.0),
 	       Container(
 		padding: const EdgeInsets.all(16.0),
@@ -212,7 +220,7 @@ class TelaDashboard extends StatelessWidget {
 		   ],
 		  ),
 		 ),
-		),
+		
 
             // ===================================================================
             // 📍 DESAFIO 3 (2,0 pontos):
