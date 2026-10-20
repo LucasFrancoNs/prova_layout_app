@@ -192,6 +192,27 @@ class TelaDashboard extends StatelessWidget {
             ),
 	    
             const SizedBox(height: 24.0),
+	       Container(
+		padding: const EdgeInsets.all(16.0),
+		decoration: BoxDecoration(
+		color: Colors.grey.shade100,
+		borderRadius: BorderRadius.circular(12),
+		),
+		child: Row(
+		mainAxisAlignment: MainAxisAlignment.spaceBetween,
+		children: const [
+		 Row(
+		  children: [
+		       Icon(Icons.list, color: Colors.teal),
+		       SizedBox(width: 8.0),
+		       Text('Últimos Registros', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+		      ],
+	 	     ),
+		     Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+		   ],
+		  ),
+		 ),
+		),
 
             // ===================================================================
             // 📍 DESAFIO 3 (2,0 pontos):
@@ -205,6 +226,7 @@ class TelaDashboard extends StatelessWidget {
             // Demonstrar/comprovar a ocorrência e correção de um erro de overflow
             // (RenderFlex overflow) via prints ou bloco comentado.
             // ===================================================================
+	    
           ],
         ),
       ),
