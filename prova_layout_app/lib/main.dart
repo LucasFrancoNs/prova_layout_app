@@ -57,7 +57,7 @@ class TelaDashboard extends StatelessWidget {
             // ===================================================================
             Row(
               children: [
-                Expanded(                      //Desafio 4:    Se esse Expanded Estiver com estouro de espaçamento ele Ira,
+                Expanded(                      //Desafio 4:    Se esse Expanded Estiver com estouro de espaçamento(overflow) ele Ira,
                   child: Container(		//quebrar e juntar tudo um em cima do outro e ira perder a responsividade da aplicação.
                     padding: const EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
