@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widget/bloco_estatistica.dart'  // TODO Desafio 7: Importar o widget customizado criado em lib/widgets/bloco_estatistica.dart
+import 'widget/bloco_estatistica.dart'   // TODO Desafio 7: Importar o widget customizado criado em lib/widgets/bloco_estatistica.dart
 // import 'widgets/bloco_estatistica.dart';
 
 void main() {
